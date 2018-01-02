@@ -3,6 +3,8 @@
 require "bundler/setup"
 require "cooking_scraper"
 require './lib/cooking_scraper'
+require "CookingScraper"
+
 
 CookingScraper::CLI.new.call
 

@@ -1,31 +1,27 @@
-class CookingScraper::Class
-attr_accessor :name, :category, :price, :url
+class CookingScraper::Classes
+  attr_accessor :name, :location, :category, :time
+  @@all = []
 
-def self.today
-  #this is will i will return data
-  self.scrape_classes
-end
+  def initialize
+    @@all << self
+  end
 
+  def self.all
+    @@all
+  end
 
-def self.scrape_classes
-  classes []
-  classes <<self.scrape_king_arthur
-  classes <<self.scrape_weathersfield
-  classes <<self.scrape_coop
+  def self.clear
+    @@all.clear
+  end
 
-  classes
-end
+  def self.find(id)
+    self.all[id.to_i-1]
+  end
 
-def self.scrape_king_arthur
-  doc = Nokogiri::HTML(open("https://www.kingarthurflour.com/baking-school/calendar/?mo=012018&cat=3,8,10,11&loc=1"))
-end
+  def self.empty?
+    if @@all.empty?
+      CookingScraper::CLI.no_courses
+    end
+  end
 
-def self.scrape_weathersfield
-  doc = Nokogiri::HTML(open("https://www.weathersfieldinn.com/copy-of-culinary-events"))
-end
-
-def self.scrape_coop
-  doc = Nokogiri::HTML(open("http://coopfoodstore.com/calendar/month"))
-end
-
-end #end the class
+end #end class
