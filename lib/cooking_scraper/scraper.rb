@@ -19,7 +19,6 @@ end
 def self.scrape_king_arthur
   doc = Nokogiri::HTML(open("https://www.kingarthurflour.com/baking-school/calendar/?mo=012018&cat=3,8,10,11&loc=1"))
    binding.pry
-  
 end
 
 #def self.scrape_weathersfield
