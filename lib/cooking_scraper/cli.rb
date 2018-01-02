@@ -16,12 +16,22 @@ class CookingScraper::CLI
 
   input = gets.strip.downcase
 
-  #if else statement here to define options 1-4.
-  end #end list courses method
+        #if else statement here to define options 1-4.
+        end #end list courses method
 
-# a def to display the events ive scraped 
-#a def to say that I dont understand what your asking for
-#a def to say there are no events currently
-#a def to say goodbye
+      # a def to display the events ive scraped
 
-end #end class 
+      def error #a def to say that I dont understand what your asking for
+      puts "Uh, Oh thats a recipe I dont understand,"
+      list_courses
+      end
+
+      def no_courses #a def to say there are no events currently
+      "I'm sorry there aren't currently any cooking classes"
+      end
+
+      def goodbye #a def to say goodbye
+        puts "Goodbye!"
+      end
+
+end #end class
