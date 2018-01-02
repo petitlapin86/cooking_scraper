@@ -17,7 +17,7 @@ class CookingScraper::CLI
         input = gets.strip.downcase
 
         #if else statement here to define options 1-4.
-        @classes = CookingScraper::Scraper.today
+        @classes = CookingScraper::Scraper.scrape
         end #end list courses method
 
       # a def to display the events ive scraped
