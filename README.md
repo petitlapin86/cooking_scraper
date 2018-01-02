@@ -1,8 +1,8 @@
-# CookingScraper
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/cooking_scraper`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome to your new Cooking Class gem! You can use this gem to find out about local cooking classes in the Upper Valley (Vermont & New Hampshire).
 
-TODO: Delete this and the text above, and describe your gem
+You will find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/cooking_scraper`. To experiment with that code, run `bin/console` for an interactive prompt.
+
 
 ## Installation
 

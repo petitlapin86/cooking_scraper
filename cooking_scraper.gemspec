@@ -6,7 +6,7 @@ require "cooking_scraper/version"
 Gem::Specification.new do |spec|
   spec.name          = "cooking_scraper"
   spec.version       = CookingScraper::VERSION
-  spec.authors       = ["'Paige Skinner'"]
+  spec.authors       = ["'Paige Jones'"]
   spec.email         = ["'skinnerpa86@yahoo.com'"]
 
   spec.summary       = %q{This is a gem to help find local Upper Valley cooking classes.}
@@ -31,4 +31,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
+  #adding in pry and nokogiri
+  spec.add_development_dependency "pry"
+  spec.add_dependency "nokogiri"
 end
