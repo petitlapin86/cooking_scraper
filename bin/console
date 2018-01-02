@@ -2,6 +2,11 @@
 
 require "bundler/setup"
 require "cooking_scraper"
+require './lib/cooking_scraper'
+
+CookingScraper::CLI.new.call
+
+puts "is this working?"
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.

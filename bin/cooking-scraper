@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require './lib/cooking_scraper'
+
+CookingScraper::CLI.new.call
+
+puts "is this working?"

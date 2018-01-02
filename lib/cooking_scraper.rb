@@ -1,5 +1,2 @@
-require "cooking_scraper/version"
-
-module CookingScraper
-  # Your code goes here...
-end
+require_relative "./cooking_scraper/version"
+require_relative './cooking_scraper/cli'
