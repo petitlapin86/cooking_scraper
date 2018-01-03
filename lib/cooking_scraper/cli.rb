@@ -1,17 +1,20 @@
 class CookingScraper::CLI
 
         def call
-       puts "Cooking is good for the soul, take a look at available classes"
+       puts "=" * 65
+       puts " Cooking is good for the soul, take a look at available classes:".colorize(:light_cyan)
+       puts "=" * 65
        list_courses #this will be a method i create
         end
 
 
         def list_courses
-        puts "Please select which culinary events you would like to see or type 'exit'"
-        puts "1. Breadmaking Classes"
-        puts "2. Dessert Classes"
-        puts "3. Savory Classes"
-        puts "4. All"
+        puts " Please select which culinary events you would like to see ".colorize(:light_blue)
+        puts " enter by number or type 'exit'".colorize(:light_blue)
+        puts "  1. Breadmaking Classes".colorize(:light_cyan)
+        puts "  2. Dessert Classes".colorize(:light_cyan)
+        puts "  3. Savory Classes".colorize(:light_cyan)
+        puts "  4. All".colorize(:light_cyan)
 
 
         input = gets.strip.downcase
