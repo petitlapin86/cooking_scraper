@@ -21,15 +21,19 @@ class CookingScraper::CLI
          #if else statement here to define options 1-4.
          if    input == "1"
                CookingScraper::Classes.create_category("Breadmaking")
+               display_cooking_classes
 
          elsif input == "2"
                CookingScraper::Classes.create_category("Dessert")
+               display_cooking_classes
 
          elsif input == "3"
                CookingScraper::Classes.create_category("Savory")
+               display_cooking_classes
 
          elsif input == "4"
                CookingScraper::Classes.create_category("All")
+               display_cooking_classes
 
         elsif input == "exit"
               say_goodbye
@@ -46,11 +50,25 @@ class CookingScraper::CLI
         end
 
   def   no_courses #a def to say there are no events currently
-        "I'm sorry there aren't currently any cooking classes".colorize(:light_blue)
+        " I'm sorry there aren't currently any cooking classes".colorize(:light_blue)
+        say_goodbye
         end
 
   def   say_goodbye #a def to say goodbye
-        puts "Goodbye!".colorize(:light_blue)
+        puts " Goodbye!".colorize(:light_blue)
         exit
         end
+
+#this needs work need to figure out how to display by scraped category instead of all and then narrowing down*****************
+        def display_cooking_classes
+          CookingScraper::Classes.all.each.with_index(1) do |class, i|
+            puts "#{i}.".colorize(:light_cyan)
+            puts "Event: #{class.name.upcase}".colorize(:light_cyan)
+            puts "Location: #{class.location}".colorize(:light_cyan)
+            puts "Time: #{class.time}".colorize(:light_cyan)
+            puts ""
+          end
+        end
+
+
         end #end class
