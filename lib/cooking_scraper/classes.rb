@@ -3,25 +3,30 @@ class CookingScraper::Classes
   @@all = []
 
   def initialize
-    @@all << self
-  end
+      @@all << self
+      end
 
   def self.all
-    @@all
-  end
+      @@all
+      end
 
   def self.clear
-    @@all.clear
-  end
+      @@all.clear
+      end
 
   def self.find(id)
-    self.all[id.to_i-1]
-  end
+      self.all[id.to_i-1]
+      end
 
   def self.empty?
-    if @@all.empty?
+      if @@all.empty?
       CookingScraper::CLI.no_courses
-    end
-  end
+      end
+      end
 
-end #end class
+  def self.create_category(category) #=> "Breadmaking"
+      CookingScraper::Scraper.scrape_category(category)
+      self.empty?
+      end
+
+  end #end class
