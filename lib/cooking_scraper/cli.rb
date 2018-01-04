@@ -60,15 +60,15 @@ class CookingScraper::CLI
         end
 
 #this needs work need to figure out how to display by scraped category instead of all and then narrowing down*****************
-        def display_cooking_classes
-          CookingScraper::Classes.all.each.with_index(1) do |class, i|
-            puts "#{i}.".colorize(:light_cyan)
-            puts "Event: #{class.name.upcase}".colorize(:light_cyan)
-            puts "Location: #{class.location}".colorize(:light_cyan)
-            puts "Time: #{class.time}".colorize(:light_cyan)
-            puts ""
-          end
-        end
+      #  def display_cooking_classes
+      #    CookingScraper::Classes.all.each.with_index(1) do |class, i|
+      #      puts "#{i}.".colorize(:light_cyan)
+      #      puts "Event: #{class.name.upcase}".colorize(:light_cyan)
+      #      puts "Location: #{class.location}".colorize(:light_cyan)
+      #      puts "Time: #{class.time}".colorize(:light_cyan)
+      #      puts ""
+      #    end
+      #  end
 
 
         end #end class
