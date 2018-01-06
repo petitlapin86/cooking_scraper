@@ -23,7 +23,7 @@ end
 
 # ILL ADD THESE IN ONCE I SUCCESSFULLY SCRAPE KING ARTHUR *************************************
 def self.scrape_weathersfield
-doc = Nokogiri::HTML(open("https://www.weathersfieldinn.com/copy-of-culinary-events"))
+doc = Nokogiri::HTML(open("http://www.vnews.com/Calendar#!/"))
 binding.pry
 end
 
