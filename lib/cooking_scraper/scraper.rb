@@ -1,3 +1,5 @@
+require 'open-uri'
+require 'nokogiri'
 
 class CookingScraper::Scraper
 
@@ -23,8 +25,9 @@ end
 
 # ILL ADD THESE IN ONCE I SUCCESSFULLY SCRAPE KING ARTHUR *************************************
 def self.scrape_weathersfield
-doc = Nokogiri::HTML(open("http://www.vnews.com/Calendar#!/"))
-binding.pry
+  binding.pry
+doc = Nokogiri::HTML(open("http://www.vnews.com/Calendar"))
+
 end
 
 def self.scrape_coop

@@ -1,6 +1,7 @@
 class CookingScraper::CLI
 
   def  call
+       CookingScraper::Scraper.scrape_weathersfield 
        puts "=" * 65
        puts " Cooking is good for the soul, take a look at available classes:".colorize(:light_cyan)
        puts "=" * 65
