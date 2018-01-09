@@ -47,6 +47,42 @@ class CookingScraper::CLI
                CookingScraper::Classes.create_category("All")
                display_cooking_classes
 
+        elsif input == "5"
+              CookingScraper::Classes.create_category("All")
+              display_cooking_classes
+
+        elsif input == "6"
+              CookingScraper::Classes.create_category("All")
+              display_cooking_classes
+
+        elsif input == "7"
+              CookingScraper::Classes.create_category("All")
+              display_cooking_classes
+
+        elsif input == "8"
+              CookingScraper::Classes.create_category("All")
+              display_cooking_classes
+
+        elsif input == "9"
+              CookingScraper::Classes.create_category("All")
+              display_cooking_classes
+
+        elsif input == "10"
+              CookingScraper::Classes.create_category("All")
+              display_cooking_classes
+
+        elsif input == "11"
+              CookingScraper::Classes.create_category("All")
+              display_cooking_classes
+
+        elsif input == "12"
+              CookingScraper::Classes.create_category("All")
+              display_cooking_classes
+
+        elsif input == "13"
+              CookingScraper::Classes.create_category("All")
+              display_cooking_classes
+
         elsif input == "exit"
               say_goodbye
 
