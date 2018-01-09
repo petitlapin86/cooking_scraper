@@ -1,7 +1,7 @@
-require 'open-uri'
+#require 'open-uri'
+#require 'nokogiri'
 require 'pry'
-require 'nokogiri'
-# require 'colorize'
+#require 'colorize'
 
 
 require_relative './cooking_scraper/version'

@@ -25,13 +25,13 @@ end
 
 # ILL ADD THESE IN ONCE I SUCCESSFULLY SCRAPE KING ARTHUR *************************************
 def self.scrape_weathersfield
-  binding.pry
-doc = Nokogiri::HTML(open("http://www.vnews.com/Calendar"))
+doc = Nokogiri::HTML(open("https://www.astrology.com/horoscopes.html",  "Accept-Encoding" => "plain"))
 
 end
 
 def self.scrape_coop
-  doc = Nokogiri::HTML(open("http://coopfoodstore.com/calendar/month"))
+  doc = Nokogiri::HTML(open("https://www.astrology.com/horoscope/daily/taurus.html",  "Accept-Encoding" => "plain"))
+  binding.pry
 end
 
   #THIS METHOD NEEDS WORK***********************************************************************
