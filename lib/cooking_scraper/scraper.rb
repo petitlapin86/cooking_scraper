@@ -1,10 +1,10 @@
 require 'open-uri'
 require 'nokogiri'
 
-class CookingScraper::Scraper
+class HoroscopeScraper::Scraper
 
 #AVIS VERSION PUTS ATT ACCESSOR here
-attr_accessor :horoscope
+attr_accessor :horoscope#, :name=nil
 
 def self.todays_horoscopes
   #this is where i will return data
@@ -39,6 +39,7 @@ def self.scrape_aries
   doc = Nokogiri::HTML(open("https://www.astrology.com/horoscope/daily/aries.html",  "Accept-Encoding" => "plain"))
   sign = self.new
   sign.horoscope = doc.search("p").text
+  #sign.name = "Aries"
   sign
 end
 

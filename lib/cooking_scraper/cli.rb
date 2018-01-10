@@ -1,6 +1,6 @@
 require "colorize"
 
-class CookingScraper::CLI
+class HoroscopeScraper::CLI
 
   def  call
        puts "=" * 65
@@ -30,7 +30,7 @@ class CookingScraper::CLI
         input = gets.strip.downcase
 
 
-        @signs = CookingScraper::Scraper.todays_horoscopes
+        @signs = HoroscopeScraper::Scraper.todays_horoscopes
 
          if    input == "1"
 
