@@ -33,41 +33,41 @@ class HoroscopeScraper::CLI
         @signs = HoroscopeScraper::Scraper.todays_horoscopes
 
          if    input == "1"
-
-               display_sign.each_index.detect{|i| i == 1}
+               puts @signs[0].horoscope.colorize(:light_blue)
 
          elsif input == "2"
-               HoroscopeScraper::Scraper.scrape_taurus
+               puts @signs[1].horoscope.colorize(:light_blue)
 
          elsif input == "3"
-               display_sign
+               puts @signs[2].horoscope.colorize(:light_blue)
 
          elsif input == "4"
-               display_sign
+               puts @signs[3].horoscope.colorize(:light_blue)
 
         elsif input == "5"
-              display_sign
+              puts @signs[4].horoscope.colorize(:light_blue)
 
         elsif input == "6"
-              display_sign
+          puts @signs[5].horoscope.colorize(:light_blue)
+
 
         elsif input == "7"
-              display_sign
+              puts @signs[6].horoscope.colorize(:light_blue)
 
         elsif input == "8"
-              display_sign
+              puts @signs[7].horoscope.colorize(:light_blue)
 
         elsif input == "9"
-              display_sign
+              puts @signs[8].horoscope.colorize(:light_blue)
 
         elsif input == "10"
-              display_sign
+              puts @signs[9].horoscope.colorize(:light_blue)
 
         elsif input == "11"
-              display_sign
+              puts @signs[10].horoscope.colorize(:light_blue)
 
         elsif input == "12"
-              display_sign
+              puts @signs[11].horoscope.colorize(:light_blue)
 
         elsif input == "13"
               whats_my_sign
@@ -104,13 +104,13 @@ class HoroscopeScraper::CLI
         end
 
        # THIS WILL DISPLAY OUT PERSONAL HOROSCOPE OF THE DAY THIS STILL NEEDS WORK
-  def     display_sign
-          @signs.each.with_index(1) do |sign, i|
-            puts "#{i}.".colorize(:cyan)
-            puts "Your Horoscope For Today: #{sign.horoscope}".colorize(:light_blue)
-            puts ""
-          end
-          end
+  #def     display_sign
+  #        @signs.each.with_index(1) do |sign, i|
+  #          puts "#{i}.".colorize(:cyan)
+  #          puts "Your Horoscope For Today: #{sign.horoscope}".colorize(:light_blue)
+  #          puts ""
+  #        end
+  #        end
 
         # NOT SURE IF I REALLY NEED THIS METHOD
   def   no_horoscope #a def to say there are no horoscopes currently
