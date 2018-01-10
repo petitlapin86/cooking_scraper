@@ -5,27 +5,27 @@ class CookingScraper::Scraper
 
 def self.scrape
   #this is where i will return data
-  self.scrape_classes
+  self.scrape_signs
 end
 
 
-def self.scrape_classes
-  classes = []
+def self.scrape_signs
+  signs = []
   #classes << self.scrape_coop
-  classes << self.scrape_aries
-  classes << self.scrape_taurus
-  classes << self.scrape_gemini
-  classes << self.scrape_cancer
-  classes << self.scrape_leo
-  classes << self.scrape_virgo
-  classes << self.scrape_libra
-  classes << self.scrape_scorpio
-  classes << self.scrape_sagittarius
-  classes << self.scrape_capricorn
-  classes << self.scrape_aquarius
-  classes << self.scrape_pisces
+  signs << self.scrape_aries
+  signs << self.scrape_taurus
+  signs << self.scrape_gemini
+  signs << self.scrape_cancer
+  signs << self.scrape_leo
+  signs << self.scrape_virgo
+  signs << self.scrape_libra
+  signs << self.scrape_scorpio
+  signs << self.scrape_sagittarius
+  signs << self.scrape_capricorn
+  signs << self.scrape_aquarius
+  signs << self.scrape_pisces
 
-  classes
+  signs
 end
 
 #def self.scrape_coop
