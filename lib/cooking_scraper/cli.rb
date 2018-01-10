@@ -37,8 +37,7 @@ class HoroscopeScraper::CLI
                display_sign.each_index.detect{|i| i == 1}
 
          elsif input == "2"
-               #CookingScraper::Classes.create_category("Taurus")
-               display_sign
+               HoroscopeScraper::Scraper.scrape_taurus
 
          elsif input == "3"
                display_sign

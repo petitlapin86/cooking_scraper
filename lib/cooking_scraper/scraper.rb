@@ -3,7 +3,6 @@ require 'nokogiri'
 
 class HoroscopeScraper::Scraper
 
-#AVIS VERSION PUTS ATT ACCESSOR here
 attr_accessor :horoscope#, :name=nil
 
 def self.todays_horoscopes
@@ -14,7 +13,6 @@ end
 
 def self.scrape_signs
   signs = []
-  #classes << self.scrape_coop
   signs << self.scrape_aries
   signs << self.scrape_taurus
   signs << self.scrape_gemini
@@ -31,10 +29,6 @@ def self.scrape_signs
   signs
 end
 
-#def self.scrape_coop
-#doc = Nokogiri::HTML(open("https://www.astrology.com/horoscopes.html",  "Accept-Encoding" => "plain"))
-#end
-
 def self.scrape_aries
   doc = Nokogiri::HTML(open("https://www.astrology.com/horoscope/daily/aries.html",  "Accept-Encoding" => "plain"))
   sign = self.new
@@ -45,7 +39,6 @@ end
 
 def self.scrape_taurus
   doc = Nokogiri::HTML(open("https://www.astrology.com/horoscope/daily/taurus.html",  "Accept-Encoding" => "plain"))
-  #binding.pry
   sign = self.new
   sign.horoscope = doc.search("p").text
   sign
@@ -122,17 +115,5 @@ def self.scrape_pisces
   sign
 end
 
-
-
-
-
-  #THIS METHOD NEEDS WORK***********************************************************************
-  #def  self.scrape_category(category)
-  #     self.scrape.css("div#body div#content.content div.category_#{event_time} .event_list").each do |event|
-  #     event.css("tr").collect do |attribute|
-  #     self.scrape_category(attribute)
-  #     end
-  #     end
-  #     end
 
 end #end the class
