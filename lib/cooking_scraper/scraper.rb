@@ -3,7 +3,10 @@ require 'nokogiri'
 
 class CookingScraper::Scraper
 
-def self.scrape
+#AVIS VERSION PUTS ATT ACCESSOR here
+attr_accessor :horoscope
+
+def self.todays_horoscopes
   #this is where i will return data
   self.scrape_signs
 end
@@ -41,7 +44,7 @@ end
 
 def self.scrape_taurus
   doc = Nokogiri::HTML(open("https://www.astrology.com/horoscope/daily/taurus.html",  "Accept-Encoding" => "plain"))
-  binding.pry
+  #binding.pry
   sign = self.new
   sign.horoscope = doc.search("p").text
   sign

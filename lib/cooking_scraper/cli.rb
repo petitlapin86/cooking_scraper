@@ -11,6 +11,7 @@ class CookingScraper::CLI
        end
 
   def   list_courses
+
         puts " Please select your sign, enter by number or type 'exit' ".colorize(:light_blue)
         puts "  1.".colorize(:light_blue) + " Aries".colorize(:cyan)
         puts "  2.".colorize(:light_blue) + " Taurus".colorize(:cyan)
@@ -29,53 +30,56 @@ class CookingScraper::CLI
 
         input = gets.strip.downcase
 
+        #AVIS VERSION
+        @signs = CookingScraper::Scraper.todays_horoscopes
+
          #if else statement here to define options 1-4.
          if    input == "1"
-               CookingScraper::Classes.create_category("Aries")
+               #CookingScraper::Classes.create_category("Aries")
                display_sign
 
          elsif input == "2"
-               CookingScraper::Classes.create_category("Taurus")
+               #CookingScraper::Classes.create_category("Taurus")
                display_sign
 
          elsif input == "3"
-               CookingScraper::Classes.create_category("Gemini")
+               #CookingScraper::Classes.create_category("Gemini")
                display_sign
 
          elsif input == "4"
-               CookingScraper::Classes.create_category("Cancer")
+               #CookingScraper::Classes.create_category("Cancer")
                display_sign
 
         elsif input == "5"
-              CookingScraper::Classes.create_category("Leo")
+              #CookingScraper::Classes.create_category("Leo")
               display_sign
 
         elsif input == "6"
-              CookingScraper::Classes.create_category("Virgo")
+              #CookingScraper::Classes.create_category("Virgo")
               display_sign
 
         elsif input == "7"
-              CookingScraper::Classes.create_category("Libra")
+              #CookingScraper::Classes.create_category("Libra")
               display_sign
 
         elsif input == "8"
-              CookingScraper::Classes.create_category("Scorpio")
+              #CookingScraper::Classes.create_category("Scorpio")
               display_sign
 
         elsif input == "9"
-              CookingScraper::Classes.create_category("Sagittarius")
+              #CookingScraper::Classes.create_category("Sagittarius")
               display_sign
 
         elsif input == "10"
-              CookingScraper::Classes.create_category("Capricorn")
+              #CookingScraper::Classes.create_category("Capricorn")
               display_sign
 
         elsif input == "11"
-              CookingScraper::Classes.create_category("Aquarius")
+              #CookingScraper::Classes.create_category("Aquarius")
               display_sign
 
         elsif input == "12"
-              CookingScraper::Classes.create_category("Pisces")
+              #CookingScraper::Classes.create_category("Pisces")
               display_sign
 
         elsif input == "13"
@@ -114,11 +118,11 @@ class CookingScraper::CLI
 
        # THIS WILL DISPLAY OUT PERSONAL HOROSCOPE OF THE DAY THIS STILL NEEDS WORK
   def     display_sign
-          CookingScraper::Classes.all.each.with_index(1) do |classes, i|
+          @signs.each.with_index(1) do |sign, i|
             puts "#{i}."
-            puts "Sign: #{classes.category.upcase}"
-            puts "Horoscope: #{classes.horocope}"
-            puts "Time: #{classes.time}"
+            #puts "Sign: #{}{classes.category.upcase}"
+            puts "Horoscope: #{sign.horoscope}"
+            #puts "Time: #{classes.time}"
             puts ""
           end
           end
