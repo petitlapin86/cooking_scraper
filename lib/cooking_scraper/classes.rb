@@ -1,5 +1,5 @@
 class CookingScraper::Classes
-  attr_accessor :name, :location, :category, :time
+  attr_accessor :horoscope, :category, :time
   @@all = []
 
   def initialize
@@ -20,11 +20,11 @@ class CookingScraper::Classes
 
   def self.empty?
       if @@all.empty?
-      CookingScraper::CLI.no_courses
+      CookingScraper::CLI.no_horoscope
       end
       end
 
-  def self.create_category(category) #=> "Breadmaking"
+  def self.create_category(category) #=> "Aries"
       CookingScraper::Scraper.scrape_category(category)
       self.empty?
       end

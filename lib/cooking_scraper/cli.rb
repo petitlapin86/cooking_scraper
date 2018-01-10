@@ -32,51 +32,51 @@ class CookingScraper::CLI
          #if else statement here to define options 1-4.
          if    input == "1"
                CookingScraper::Classes.create_category("Aries")
-               display_cooking_classes
+               display_sign
 
          elsif input == "2"
                CookingScraper::Classes.create_category("Taurus")
-               display_cooking_classes
+               display_sign
 
          elsif input == "3"
                CookingScraper::Classes.create_category("Gemini")
-               display_cooking_classes
+               display_sign
 
          elsif input == "4"
                CookingScraper::Classes.create_category("Cancer")
-               display_cooking_classes
+               display_sign
 
         elsif input == "5"
               CookingScraper::Classes.create_category("Leo")
-              display_cooking_classes
+              display_sign
 
         elsif input == "6"
               CookingScraper::Classes.create_category("Virgo")
-              display_cooking_classes
+              display_sign
 
         elsif input == "7"
               CookingScraper::Classes.create_category("Libra")
-              display_cooking_classes
+              display_sign
 
         elsif input == "8"
               CookingScraper::Classes.create_category("Scorpio")
-              display_cooking_classes
+              display_sign
 
         elsif input == "9"
               CookingScraper::Classes.create_category("Sagittarius")
-              display_cooking_classes
+              display_sign
 
         elsif input == "10"
               CookingScraper::Classes.create_category("Capricorn")
-              display_cooking_classes
+              display_sign
 
         elsif input == "11"
               CookingScraper::Classes.create_category("Aquarius")
-              display_cooking_classes
+              display_sign
 
         elsif input == "12"
               CookingScraper::Classes.create_category("Pisces")
-              display_cooking_classes
+              display_sign
 
         elsif input == "13"
               whats_my_sign
@@ -87,8 +87,6 @@ class CookingScraper::CLI
          else  error
          end
          end #end list courses method
-
-         # a def to display the events ive scraped
 
   def   error #a def to say that I dont understand what your asking for
         puts " Uh, Oh thats a star sign I dont understand, lets try again".colorize(:light_blue)
@@ -110,11 +108,23 @@ class CookingScraper::CLI
         puts " Aquarius".colorize(:light_blue) + " (January 20 to February 18)".colorize(:cyan)
         puts " Pisces".colorize(:light_blue) + " (February 19 to March 20)".colorize(:cyan)
         puts "=" * 65
-        sleep 6
+        sleep 5
         list_courses
         end
 
-  def   no_courses #a def to say there are no events currently
+       # THIS WILL DISPLAY OUT PERSONAL HOROSCOPE OF THE DAY THIS STILL NEEDS WORK
+  def     display_sign
+          CookingScraper::Classes.all.each.with_index(1) do |classes, i|
+            puts "#{i}."
+            puts "Sign: #{classes.category.upcase}"
+            puts "Horoscope: #{classes.horocope}"
+            puts "Time: #{classes.time}"
+            puts ""
+          end
+          end
+
+        # NOT SURE IF I REALLY NEED THIS METHOD
+  def   no_horoscope #a def to say there are no horoscopes currently
         " I'm sorry there aren't currently any horoscopes, please check back tomorrow".colorize(:light_blue)
         say_goodbye
         end
@@ -123,17 +133,5 @@ class CookingScraper::CLI
         puts " Goodbye!".colorize(:light_blue)
         exit
         end
-
-#this needs work need to figure out how to display by scraped category instead of all and then narrowing down*****************
-      #  def display_cooking_classes
-      #    CookingScraper::Classes.all.each.with_index(1) do |class, i|
-      #      puts "#{i}.".colorize(:light_cyan)
-      #      puts "Event: #{class.name.upcase}".colorize(:light_cyan)
-      #      puts "Location: #{class.location}".colorize(:light_cyan)
-      #      puts "Time: #{class.time}".colorize(:light_cyan)
-      #      puts ""
-      #    end
-      #  end
-
 
         end #end class
