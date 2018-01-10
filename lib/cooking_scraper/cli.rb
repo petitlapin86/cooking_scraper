@@ -34,40 +34,51 @@ class HoroscopeScraper::CLI
 
          if    input == "1"
                puts @signs[0].horoscope.colorize(:light_blue)
+               menu
 
          elsif input == "2"
                puts @signs[1].horoscope.colorize(:light_blue)
+               menu
 
          elsif input == "3"
                puts @signs[2].horoscope.colorize(:light_blue)
+               menu
 
          elsif input == "4"
                puts @signs[3].horoscope.colorize(:light_blue)
+               menu
 
         elsif input == "5"
               puts @signs[4].horoscope.colorize(:light_blue)
+              menu
 
         elsif input == "6"
-          puts @signs[5].horoscope.colorize(:light_blue)
-
+              puts @signs[5].horoscope.colorize(:light_blue)
+              menu
 
         elsif input == "7"
               puts @signs[6].horoscope.colorize(:light_blue)
+              menu
 
         elsif input == "8"
               puts @signs[7].horoscope.colorize(:light_blue)
+              menu
 
         elsif input == "9"
               puts @signs[8].horoscope.colorize(:light_blue)
+              menu
 
         elsif input == "10"
               puts @signs[9].horoscope.colorize(:light_blue)
+              menu
 
         elsif input == "11"
               puts @signs[10].horoscope.colorize(:light_blue)
+              menu
 
         elsif input == "12"
               puts @signs[11].horoscope.colorize(:light_blue)
+              menu
 
         elsif input == "13"
               whats_my_sign
@@ -112,9 +123,18 @@ class HoroscopeScraper::CLI
   #        end
   #        end
 
+  def   menu
+        input = gets.strip.downcase
+        puts "If you would like to see another horoscope type menu, to exit type exit".colorize(:cyan)
+        if input == "menu"
+          list_signs
+        else input == "exit"
+          say_goodbye
+        end
+        end
         # NOT SURE IF I REALLY NEED THIS METHOD
   def   no_horoscope #a def to say there are no horoscopes currently
-        " I'm sorry there aren't currently any horoscopes, please check back tomorrow".colorize(:light_blue)
+        puts " I'm sorry there aren't currently any horoscopes, please check back tomorrow".colorize(:light_blue)
         say_goodbye
         end
 
