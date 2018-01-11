@@ -1,7 +1,7 @@
 
 Welcome to your new Cooking Class gem! You can use this gem to find out about local cooking classes in the Upper Valley (Vermont & New Hampshire).
 
-You will find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/cooking_scraper`. To experiment with that code, run `bin/console` for an interactive prompt.
+You will find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/horoscope_scraper`. To experiment with that code, run `bin/horoscopes.rb` for an interactive prompt.
 
 
 ## Installation
@@ -9,7 +9,7 @@ You will find the files you need to be able to package up your Ruby library into
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'cooking_scraper'
+gem 'horoscope_scraper'
 ```
 
 And then execute:
@@ -18,7 +18,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install cooking_scraper
+    $ gem install horoscope_scraper
 
 ## Usage
 
@@ -26,7 +26,7 @@ TODO: Write usage instructions here
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/horoscopes.rb` for an interactive prompt that will allow you to experiment.
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
