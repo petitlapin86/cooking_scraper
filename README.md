@@ -1,5 +1,5 @@
 
-Welcome to your new Cooking Class gem! You can use this gem to find out about local cooking classes in the Upper Valley (Vermont & New Hampshire).
+Welcome to your Horoscope gem! You can use this gem to find out your daily horoscope. 
 
 You will find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/horoscope_scraper`. To experiment with that code, run `bin/horoscopes.rb` for an interactive prompt.
 
